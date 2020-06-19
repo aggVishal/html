@@ -11,35 +11,58 @@
     <h2>This is a form</h2>
     <form action="backend.php">
         <div>
-            Name: <input type="text" name="myName">
+            <label for="name">Name:</label>
+            <input type="text" name="myName" id="name">
         </div>
         <br>
         <div>
-            Role: <input type="text" ,name="myRole">
+            <label for="role">Role:</label>
+            <input type="text" ,name="myRole" id="role">
         </div>
         <br>
         <div>
-            Email: <input type="email" name="myEmail">
-        </div>
-        <br>        
-        <div>
-            DOB: <input type="date" name="myDOB">
+            <label for="mail">Email:</label>
+            <input type="email" name="myEmail" id="mail">
         </div>
         <br>
         <div>
-            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> Other <input type="radio" name="myGender">
+            <label for="DOB">DOB:</label>
+            <input type="date" name="myDOB" id="DOB">
         </div>
         <br>
         <div>
-            Contact: <input type="number" name="myNum">
+            <label for="gender">Gender:</label>
+            Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> Other <input
+                type="radio" name="myGender" id="gender">
         </div>
         <br>
         <div>
-            Are you eligible: <input type="checkbox" name="myElegebility">
+            <label for="num">Contact:</label>
+            <input type="number" name="myNum" id="num">
         </div>
         <br>
         <div>
-            Password: <input type="password" name="myPassword">
+            <label for="ele">Are you eligible?:</label>
+            <input type="checkbox" name="myElegebility" id="ele" checked>
+        </div>
+        <br>
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" name="myPassword" id="pass">
+        </div>
+        <br>
+        <div>
+            <label for="note">Write about yourself</label>
+            <br><textarea name="myText" cols="80" rows="8" id="note"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="car">Which car want to take: </label>
+            <select name="myCar" id="car">
+                <option value="Indica">Indica</option>
+                <option value="Swift" selected>Swift</option>
+                <option value="Maruti">Maruti</option>
+            </select>
         </div>
         <br>
         <div>
