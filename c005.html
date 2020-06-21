@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* class Selector */
+        .border {
+            border: 1px solid black;
+        }
+
+        .redEle {
+            color: red;
+        }
+
+        .bgBlue {
+            color: brown;
+            background-color: grey;
+        }
+
+        /* Grouping Selector */
+        footer,
+        span {
+            background-color: aquamarine;
+            color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- this is a comment -->
+    <h3>CSS Selectors</h3>
+    <p id="first" class="redEle border">This is a internal Selector</p>
+    <p id="second" class="bgBlue border">This is a internal Selector</p>
+    <div>
+        <p>This is a internal Selector</p>
+        <span>this is a span</span>
+    </div>
+    <footer>This is a footer</footer>
+</body>
+
+</html>
