@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.pelto.explore.in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Hind:wght@600&family=Play:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(182, 214, 240);
+        }
+
+        .logo {
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: -20px;
+            position: absolute;
+        }
+
+        .mid {
+            display: inline-block;
+            width: 40%;
+            margin-left: 500px;
+        }
+
+        .right {
+            display: inline-block;
+            width: 30%;
+            margin-left: 100px;
+            position: absolute;
+        }
+
+        .btn {
+            background-color: rgb(182, 214, 240);
+            font-size: 18px;
+            height: 30px;
+            width: 100px;
+            border: none;
+            color: black;
+            font-family: 'Play', sans-serif;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .btn2 {
+            background-color: rgb(182, 214, 240);
+            font-size: 18px;
+            height: 30px;
+            width: 100px;
+            border-color: black;
+            color: black;
+            font-family: 'Play', sans-serif;
+            margin-top: 30px;
+            width: 70px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn3 {
+            border-radius: 10px;
+            width: 100px;
+            border: none;
+            background-color: rgb(7, 52, 104);
+            color: white;
+            cursor: pointer;
+        }
+
+        .container {
+
+            margin-top: 150px;
+            margin-left: 80px;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .inputBox{
+            border-radius: 20px;
+            border-color: black;
+        }
+
+        .h3 {
+            padding-left: 30px;
+            font-family: 'Hind', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="pelto.html"><img src="logo2.png" alt="logo"></a>
+        <!-- <img src="logo.png" alt="logo"> -->
+    </div>
+    <div class="mid">
+        <a href="#"><button class="btn">Home</button></a>
+        <a href="#"><button class="btn">About Us</button></a>
+        <a href="#"><button class="btn">Branches</button></a>
+        <a href="#"><button class="btn">Contact</button></a>
+
+    </div>
+    <div class="right">
+        <a href="#"><button class="btn2">Log In</button></a>
+        <a href="#"><button class="btn2 btn3">Register</button></a>
+    </div>
+    <div class="container">
+        <h3 class="h3">Join our Quick plan</h3>
+        <form action="backend.php">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="myName" id="name" class="inputBox">
+            </div>
+            <br>
+            <div>
+                <label for="mail">Email:</label>
+                <input type="email" name="myEmail" id="mail" class="inputBox">
+            </div>
+            <br>
+            <div>
+                <label for="age">DOB:</label>
+                <input type="number" name="myAge" id="age" class="inputBox">
+            </div>
+            <br>
+            <div>
+                <label for="gender">Gender:</label>
+                Male <input type="radio" name="myGender" > Female <input type="radio" name="myGender"> Other <input
+                    type="radio" name="myGender" id="gender">
+            </div>
+            <br>
+            <div>
+                <label for="num">Contact:</label>
+                <input type="number" name="myNum" id="num" class="inputBox">
+            </div>
+            <br>
+
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="reset" value="Reset">
+            </div>
+            <br>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
