@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(182, 214, 240);
+    height: 3440px;
+}
+
+#taskbar {
+    background-color: white;
+    position: fixed;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 120%;
+    height: 70px;
+}
+
+.footr {
+    background-color: black;
+    position: relative;
+    margin-top: 3000px;
+    margin-left: -10px;
+    width: 120%;
+    height: 300px;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: -10px;
+    position: absolute;
+}
+
+.logo a img {
+    height: 100px;
+}
+
+.navbarM {
+    margin-left: 500px;
+    display: inline-block;
+}
+
+.navbarM li {
+    float: left;
+    list-style: none;
+    margin-left: 30px;
+    font-family: 'Play', sans-serif;
+}
+
+.navbarM li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.navbarR {
+    margin-left: 180px;
+    display: inline-block;
+}
+
+.navbarR li {
+    float: left;
+    list-style: none;
+    font-family: 'Play', sans-serif;
+}
+
+.navbarR li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+#login {
+    border: 2px solid rgb(16, 78, 129);
+    border-radius: 10px;
+    padding: 5px 8px 5px 10px;
+}
+
+#login:hover {
+    background-color: rgb(72, 162, 235);
+}
+
+#register {
+    background-color: rgba(8, 8, 102, 0.842);
+    border: 2px solid rgba(8, 8, 102, 0.842);
+    border-radius: 30px;
+    padding: 5px 8px 5px 10px;
+    margin-left: 10px;
+}
+
+#register a {
+    color: white;
+}
+
+.container {
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgb(214, 200, 200);
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-left: 80px;
+    padding: 10px 20px 20px 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.lbl {
+    margin-right: 30px;
+}
+
+.inputBox {
+    border-radius: 5px;
+    border-color: black;
+    /* margin-left: 50px; */
+}
+
+.h3 {
+    padding-left: 30px;
+    font-family: 'Hind', sans-serif;
+}

@@ -1,0 +1,391 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <style>
+        .notification-bell {
+            position: absolute;
+            right: 0px;
+        }
+        
+        .dropdown-menu-notify {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 400px;
+            top: 60px;
+            right: -1px;
+            left: unset;
+            width: 460px;
+            box-shadow: 0px 5px 7px -1px #c1c1c1;
+            padding-bottom: 0px;
+            padding: 0px;
+        }
+        
+        ul ul a {
+            background: transparent;
+        }
+        
+        .dropdown-menu-notify:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: 12px;
+            border: 10px solid white;
+            border-color: transparent transparent white transparent;
+        }
+        
+        .head-notify {
+            padding: 5px 15px;
+            border-radius: 3px 3px 0px 0px;
+        }
+        
+        .footer-notify {
+            padding: 5px 15px;
+            border-radius: 0px 0px 3px 3px;
+        }
+        
+        .notification-box-notify {
+            padding: 10px 0px;
+        }
+        
+        .bg-gray-notify {
+            background-color: #eee;
+        }
+        
+        @media (max-width: 640px) {
+            .dropdown-menu-notify {
+                top: 50px;
+                left: -16px;
+                width: 290px;
+            }
+            .nav-notify {
+                display: block;
+            }
+            .nav-notify .nav-item-notify,
+            .nav-notify .nav-item-notify a {
+                padding-left: 0px;
+            }
+            .message-notify {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="/static/common/css/base.css">
+    <link rel="icon" type="image/png" href="/static/common/img/favicon.png">
+
+    <title>
+        Free Programming Videos, Courses &amp; More In Hindi - Code With Harry</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/r20200618/r20190131/show_ads_impl_fy2019.js" id="google_shimpl"></script>
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/oqtdXEs9TE9ZUAIhXNz5JBt_/recaptcha__en.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-60726752-3"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-60726752-3');
+    </script>
+
+    <!-- Google Ads Auto -->
+    <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9655830461045889",
+            enable_page_level_ads: true
+        });
+    </script>
+    <link rel="preload" href="https://adservice.google.co.in/adsid/integrator.js?domain=www.codewithharry.com" as="script">
+    <script type="text/javascript" src="https://adservice.google.co.in/adsid/integrator.js?domain=www.codewithharry.com"></script>
+    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.codewithharry.com" as="script">
+    <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.codewithharry.com"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><img class="brandLogo" src="mylogo" alt="My image"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/videos">Videos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0 mr-3" method="get" action="/search/">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+
+            </form>
+
+            <div>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModal">Login using your credentials</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="/profile/login" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="XtB7AiJcBvym4QpAJCWIi09VRbKXCsUyhta3NztwDQmWVX9gGHN1tg9UqmFgxhi2">
+                        <div class="form-group">
+                            <label for="lusername">Username</label>
+                            <input type="name" class="form-control" id="luname" placeholder="Enter your username" name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="lpassword" placeholder="Enter your password" name="password">
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m">
+                            <div style="width: 304px; height: 78px;">
+                                <div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m&amp;co=aHR0cHM6Ly93d3cuY29kZXdpdGhoYXJyeS5jb206NDQz&amp;hl=en&amp;v=oqtdXEs9TE9ZUAIhXNz5JBt_&amp;size=normal&amp;cb=rebsimqeu6jc"
+                                        width="304" height="78" role="presentation" name="a-rjq8cg5rwqzy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="path" value="/">
+
+                        <button type="submit" class="btn btn-danger mt-2" id="loginsubmit">Login</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModal">SignUp for an account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+                </div>
+
+                <div class="modal-body">
+                    <form name="contact" method="post" action="/profile/signup"><input type="hidden" name="csrfmiddlewaretoken" value="XtB7AiJcBvym4QpAJCWIi09VRbKXCsUyhta3NztwDQmWVX9gGHN1tg9UqmFgxhi2">
+
+                        <div class="form-group">
+                            <label for="uname">Username</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter your Name" name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">First Name</label>
+                            <input type="text" class="form-control" id="fname" placeholder="Enter your First Name" name="fname">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Last Name</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Enter your Last Name" name="lname">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Choose a password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Choose a password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Retype a password</label>
+                            <input type="password" class="form-control" id="password2" placeholder="Retype your password" name="password2">
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m">
+                            <div style="width: 304px; height: 78px;">
+                                <div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m&amp;co=aHR0cHM6Ly93d3cuY29kZXdpdGhoYXJyeS5jb206NDQz&amp;hl=en&amp;v=oqtdXEs9TE9ZUAIhXNz5JBt_&amp;size=normal&amp;cb=qqyqetpndypo"
+                                        width="304" height="78" role="presentation" name="a-y4ix387beld9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                <textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                            </div><iframe style="display: none;"></iframe></div>
+                        <input type="hidden" name="path" value="/">
+                        <button type="submit" class="btn btn-danger mt-2">SignUp</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <img src="/static/common/img/photo.png" alt="logo" width="120">
+            <h1 class="jumbotron-heading"><span id="typed"></span><span class="typed-cursor">|</span></h1>
+            <p class="lead text-muted">Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free!<br>Code With Harry is my attempt to teach basics and those coding techniques to people in short time which took me ages
+                to learn.</p>
+            <p>
+                <a href="/blog" class="btn btn-danger my-2">Browse Blog</a>
+                <a href="/videos" class="btn btn-success my-2">Browse Video Tutorials</a>
+                <a href="/contact" class="btn btn-primary my-2">Contact Me</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="card mx-auto my-2 p-2" style="width: 18rem;">
+                <img width="23px" height="245px" src="/static/home/img/coding.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Free Video Courses</h5>
+                    <p class="card-text">Get your programming career started with these free video courses. Source code is available with all the videos for your better experience</p>
+                    <a href="/videos" class="btn btn-primary">Browse Video Courses</a>
+                </div>
+            </div>
+
+            <div class="card mx-auto my-2 p-2" style="width: 18rem;">
+                <img width="23px" height="245px" src="/static/home/img/lambda.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Coding Articles</h5>
+                    <p class="card-text">Some of the latest coding information compiled as coding articles. Keep your programming knowledge up to date with our coding articles.</p>
+                    <a href="/blog" class="btn btn-primary">Go to Blog</a>
+                </div>
+            </div>
+
+            <div class="card mx-auto my-2 p-2" style="width: 18rem;">
+                <img width="23px" height="245px" src="/static/home/img/python.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Me</h5>
+                    <p class="card-text">Learn programming from our free courses. Examples are available with these tutorials. You can contact me for any doubt and I will get back to you!</p>
+                    <a href="/contact" class="btn btn-primary">Contact Me</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer class="container mt-3">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2019-2020 pelto.explore.in · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <!-- Custom JavaScript -->
+
+    <script src="/static/common/js/base.js"></script>
+    <script src="https://apis.google.com/js/platform.js" gapi_processed="true"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
+    <script>
+        window.onload = function() {
+            console.log("loaded")
+            var typed = new Typed('#typed', {
+                strings: ["Welcome to CodeWithHarry", "Learn Python", "Web development", "Data Science", "Machine Learning", "and other awesome programming concepts with me :)"],
+                backSpeed: 15,
+                smartBackspace: true,
+                backDelay: 1200,
+                startDelay: 1000,
+                typeSpeed: 25,
+                loop: true,
+            });
+        };
+    </script>
+
+
+
+    <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9655830461045889&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1592989672&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32768%2C9%3A32776%2C10%3A32%2C11%3A32%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C40%3A32&amp;guci=2.2.0.0.2.2.0.0&amp;format=0x0&amp;url=https%3A%2F%2Fwww.codewithharry.com%2F&amp;ea=0&amp;flash=0&amp;pra=5&amp;wgl=1&amp;adsid=ChEI8PPL9wUQ4--L95Plg8DLARJIAEtu-trBOLe_XvOPJtw1_mzzUzLeHac60tgBwxTjCOC8wBxtvLZjDVeqb7cPZ_aaF5yjwFwHEhIyAguQgLAZiEvmowRB3dWq&amp;dt=1592989671140&amp;bpp=9&amp;bdt=672&amp;idt=915&amp;shv=r20200618&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Ddacf93f58cb68ad8%3AT%3D1592208997%3AS%3DALNI_MZpqTksSjmr_wGDPGibxBm9PWQKMA&amp;nras=1&amp;correlator=4135750748867&amp;rume=1&amp;frm=20&amp;pv=2&amp;ga_vid=1845944271.1592208997&amp;ga_sid=1592989672&amp;ga_hid=865624096&amp;ga_fc=0&amp;iag=0&amp;icsg=137019392&amp;dssz=18&amp;mdo=0&amp;mso=0&amp;u_tz=330&amp;u_his=3&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;eid=21060549%2C42530499%2C42530501%2C26835106&amp;oid=3&amp;pvsid=2137032275168141&amp;pem=469&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;rx=0&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=8208&amp;bc=31&amp;jar=2020-6-24-9&amp;ifi=0&amp;uci=a!0&amp;fsb=1&amp;dtd=973" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins>
+    </ins>
+    <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
+        <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=oqtdXEs9TE9ZUAIhXNz5JBt_&amp;k=6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m&amp;cb=bjlifbtnvfvs" name="c-rjq8cg5rwqzy" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div>
+    </div><iframe id="google_osd_static_frame_8952285994739" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe>
+    <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
+        <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=oqtdXEs9TE9ZUAIhXNz5JBt_&amp;k=6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m&amp;cb=za4nv9dsycfh" name="c-y4ix387beld9" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <style type="text/css" data-typed-js-css="true">
+        .typed-cursor {
+            opacity: 1;
+        }
+        
+        .typed-cursor.typed-cursor--blink {
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+        
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+        
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20200618/r20190131/zrt_lookup.html#" data-ad-client="ca-pub-9655830461045889" style="display: none;"></iframe>
+
+</html>
